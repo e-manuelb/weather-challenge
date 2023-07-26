@@ -17,6 +17,8 @@ class UserResource extends JsonResource
             'latitude' => $this->latitude,
             'longitude' => $this->longitude,
             'weather' => $this->weather,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
             '_links' => [
                 [
                     'rel' => 'self',
