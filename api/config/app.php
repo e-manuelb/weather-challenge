@@ -195,6 +195,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Feature Service Providers
+         */
+        App\Providers\FeatureServiceProvider::class
+
     ],
 
     /*
@@ -212,4 +217,11 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+    /*
+     * Environment variables
+     */
+
+    'open_weather_api_url' => env('OPEN_WEATHER_API_URL', 'https://api.openweathermap.org'),
+    'open_weather_api_key' => env('OPEN_WEATHER_API_KEY', '73b8700d16b58d41a42c6bb145b5d6c9'),
+    'min_time_to_sync_in_hours' => env('MIN_TIME_TO_SYNC_IN_HOURS', 1)
 ];
